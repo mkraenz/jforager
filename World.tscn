@@ -1,10 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://bi08raw4e5yar"]
+[gd_scene load_steps=18 format=3 uid="uid://bi08raw4e5yar"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_dmawl"]
 [ext_resource type="Texture2D" uid="uid://day1nx0idglb4" path="res://third-party/kenney-tiny-ski/Tilemap/tilemap-clean.png" id="2_rpq6t"]
 [ext_resource type="PackedScene" uid="uid://dmqejjicnug0q" path="res://player/Player.tscn" id="3_5oc1k"]
 [ext_resource type="PackedScene" uid="uid://crfkid33pyvvx" path="res://world/manni.tscn" id="3_wm8rb"]
-[ext_resource type="PackedScene" uid="uid://df0sf8konc4fk" path="res://world/Flags.tscn" id="4_6ndw3"]
 [ext_resource type="Script" path="res://ui/TotalTime.gd" id="4_v5mmg"]
 [ext_resource type="FontFile" uid="uid://jjhy185jdb84" path="res://third-party/press_start_2p/PressStart2P-Regular.ttf" id="5_6ua4y"]
 [ext_resource type="Script" path="res://ui/hud/PenaltyTIme.gd" id="6_ap5du"]
@@ -727,36 +726,6 @@ layer_5/y_sort_origin = 0
 layer_5/z_index = 6
 layer_5/tile_data = PackedInt32Array()
 
-[node name="Flags" type="Node2D" parent="TileMap"]
-
-[node name="R1" parent="TileMap/Flags" instance=ExtResource("4_6ndw3")]
-position = Vector2(96, 368)
-
-[node name="B1" parent="TileMap/Flags" instance=ExtResource("4_6ndw3")]
-position = Vector2(96, 432)
-color = "blue"
-
-[node name="R2" parent="TileMap/Flags" instance=ExtResource("4_6ndw3")]
-position = Vector2(120, 544)
-
-[node name="B2" parent="TileMap/Flags" instance=ExtResource("4_6ndw3")]
-position = Vector2(56, 680)
-color = "blue"
-
-[node name="R3" parent="TileMap/Flags" instance=ExtResource("4_6ndw3")]
-position = Vector2(72, 792)
-
-[node name="R4" parent="TileMap/Flags" instance=ExtResource("4_6ndw3")]
-position = Vector2(199, 1018)
-
-[node name="B3" parent="TileMap/Flags" instance=ExtResource("4_6ndw3")]
-position = Vector2(152, 904)
-color = "blue"
-
-[node name="B4" parent="TileMap/Flags" instance=ExtResource("4_6ndw3")]
-position = Vector2(127, 1115)
-color = "blue"
-
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="End" type="Control" parent="UI"]
@@ -835,6 +804,7 @@ layer_3/tile_data = PackedInt32Array(131087, 196609, 5, 131086, 131073, 5, 13108
 [node name="Player" parent="TileMap2" instance=ExtResource("3_5oc1k")]
 position = Vector2(226, 75)
 scale = Vector2(0.977307, 0.996167)
+SPEED = 110.0
 
 [node name="Camera2D" type="Camera2D" parent="TileMap2/Player"]
 position = Vector2(0, 32)
