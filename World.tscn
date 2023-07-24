@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bi08raw4e5yar"]
+[gd_scene load_steps=19 format=3 uid="uid://bi08raw4e5yar"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_dmawl"]
 [ext_resource type="Texture2D" uid="uid://day1nx0idglb4" path="res://third-party/kenney-tiny-ski/Tilemap/tilemap-clean.png" id="2_rpq6t"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://ui/hud/PenaltyTIme.gd" id="6_ap5du"]
 [ext_resource type="Script" path="res://ui/end/End.gd" id="6_nqdwy"]
 [ext_resource type="PackedScene" uid="uid://b1yemod5c4r5o" path="res://world/goal.tscn" id="7_db24a"]
+[ext_resource type="PackedScene" uid="uid://dyfcp6y1a5u2k" path="res://world/resources/Stone.tscn" id="10_bdt6m"]
 [ext_resource type="Texture2D" uid="uid://cjmc80l7ku5h3" path="res://third-party/kenney_tiny-town/Tilemap/tilemap.png" id="11_0c4kb"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_exiew"]
@@ -800,6 +801,9 @@ layer_3/y_sort_enabled = false
 layer_3/y_sort_origin = 0
 layer_3/z_index = 15
 layer_3/tile_data = PackedInt32Array(131087, 196609, 5, 131086, 131073, 5, 131085, 65537, 5, 131084, 1, 5, 327684, 655361, 7, 65546, 655361, 7, 1441810, 655361, 7, 1572870, 655361, 7, 65551, 196609, 4, 65550, 131073, 4, 65549, 65537, 4, 65548, 1, 4)
+
+[node name="Stone" parent="TileMap2" instance=ExtResource("10_bdt6m")]
+position = Vector2(230, 143)
 
 [node name="Player" parent="TileMap2" instance=ExtResource("3_5oc1k")]
 position = Vector2(226, 75)
