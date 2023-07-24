@@ -28,9 +28,8 @@ collision_layer = 2
 script = ExtResource("1_calhm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 y_sort_enabled = true
-position = Vector2(8, 14)
+position = Vector2(8, -2)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ea2p8")
 
@@ -38,3 +37,4 @@ shape = SubResource("CapsuleShape2D_ea2p8")
 sprite_frames = SubResource("SpriteFrames_oiaj6")
 autoplay = "default"
 centered = false
+offset = Vector2(0, -16)
