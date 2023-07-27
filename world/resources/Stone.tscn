@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyfcp6y1a5u2k"]
+[gd_scene load_steps=4 format=3 uid="uid://dyfcp6y1a5u2k"]
 
+[ext_resource type="Script" path="res://world/resources/Stone.gd" id="1_77bwq"]
 [ext_resource type="Texture2D" uid="uid://crqvtb3u5rem6" path="res://assets/stone.png" id="1_a0jsc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cfowg"]
@@ -10,6 +11,8 @@ height = 12.0
 z_index = 10
 y_sort_enabled = true
 collision_mask = 0
+input_pickable = true
+script = ExtResource("1_77bwq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
