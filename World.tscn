@@ -523,3 +523,9 @@ offset_right = 40.0
 offset_bottom = 43.0
 text = "99/99"
 script = ExtResource("6_ap5du")
+
+[node name="ResourceRespawnTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="ResourceRespawnTimer" to="." method="_on_resource_respawn_timer_timeout"]
