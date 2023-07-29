@@ -2,21 +2,15 @@ extends Label
 
 @onready var eventbus := Eventbus
 
-var counter = 0
-var _passed_flags := 0
+var stones = 0
 
 
 func _ready():
-	eventbus.connect("flag_passed", _on_flag_passed)
-	eventbus.connect("stone_destroyed", _on_timer_timeout)
+	eventbus.connect("stone_destroyed", _on_stone_destroyed)
 
 
-func _on_flag_passed() -> void:
-	_passed_flags += 1
-
-
-func _on_timer_timeout():
-	counter = counter + 1
+func _on_stone_destroyed():
+	stones = stones + 1
 	var format_string = "stone: %s"
-	var actural_string = format_string % counter
+	var actural_string = format_string % stones
 	self.text = actural_string
