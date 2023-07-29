@@ -516,7 +516,7 @@ offset_bottom = 26.0
 text = "00:00:00"
 script = ExtResource("4_v5mmg")
 
-[node name="PenaltyTIme" type="Label" parent="UI/HUD"]
+[node name="Inventory" type="Label" parent="UI/HUD"]
 layout_mode = 0
 offset_top = 20.0
 offset_right = 40.0
