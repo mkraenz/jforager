@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dmqejjicnug0q" path="res://player/Player.tscn" id="3_5oc1k"]
 [ext_resource type="Script" path="res://ui/TotalTime.gd" id="4_v5mmg"]
 [ext_resource type="FontFile" uid="uid://jjhy185jdb84" path="res://third-party/press_start_2p/PressStart2P-Regular.ttf" id="5_6ua4y"]
-[ext_resource type="Script" path="res://ui/hud/PenaltyTIme.gd" id="6_ap5du"]
 [ext_resource type="Script" path="res://ui/end/End.gd" id="6_nqdwy"]
+[ext_resource type="Script" path="res://ui/hud/Inventory.gd" id="8_muytp"]
 [ext_resource type="Texture2D" uid="uid://b7dnp4tya8yq8" path="res://third-party/kenney_tiny-town/Tilemap/tilemap-clean.png" id="10_8l12i"]
 [ext_resource type="PackedScene" uid="uid://dyfcp6y1a5u2k" path="res://world/resources/Stone.tscn" id="10_bdt6m"]
 
@@ -521,11 +521,11 @@ layout_mode = 0
 offset_top = 20.0
 offset_right = 40.0
 offset_bottom = 43.0
-text = "99/99"
-script = ExtResource("6_ap5du")
+text = "stone: 0"
+script = ExtResource("8_muytp")
 
 [node name="ResourceRespawnTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 2.5
 autostart = true
 
 [connection signal="timeout" from="ResourceRespawnTimer" to="." method="_on_resource_respawn_timer_timeout"]
