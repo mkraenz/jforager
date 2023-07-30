@@ -1,12 +1,22 @@
 extends Node2D
 
-var scene = preload("res://world/resources/Stone.tscn")
+var Stone = preload("res://world/resources/Stone.tscn")
+var Wood = preload("res://world/resources/Wood.tscn")
+
+var rng = RandomNumberGenerator.new()
 
 
 func _on_resource_respawn_timer_timeout():
-	var rng = RandomNumberGenerator.new()
-	var my_random_x = rng.randf_range(0.00, 325.0)
-	var my_random_y = rng.randf_range(0.0, 548.0)
-	var stone = scene.instantiate()
+	var stone = Stone.instantiate()
 	add_child(stone)
-	stone.global_position = Vector2(my_random_x, my_random_y)
+	stone.global_position = _random_vector()
+
+	var wood = Wood.instantiate()
+	add_child(wood)
+	wood.global_position = _random_vector()
+
+
+func _random_vector() -> Vector2:
+	var x = rng.randf_range(0.00, 325.0)
+	var y = rng.randf_range(0.0, 548.0)
+	return Vector2(x, y)
