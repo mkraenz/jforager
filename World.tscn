@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bi08raw4e5yar"]
+[gd_scene load_steps=14 format=3 uid="uid://bi08raw4e5yar"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_dmawl"]
 [ext_resource type="PackedScene" uid="uid://dmqejjicnug0q" path="res://player/Player.tscn" id="3_5oc1k"]
+[ext_resource type="PackedScene" uid="uid://cfwfxjsyruk5i" path="res://world/resources/Wood.tscn" id="4_a6tls"]
 [ext_resource type="Script" path="res://ui/TotalTime.gd" id="4_v5mmg"]
 [ext_resource type="FontFile" uid="uid://jjhy185jdb84" path="res://third-party/press_start_2p/PressStart2P-Regular.ttf" id="5_6ua4y"]
 [ext_resource type="Script" path="res://ui/end/End.gd" id="6_nqdwy"]
@@ -456,7 +457,7 @@ layer_2/modulate = Color(1, 1, 1, 1)
 layer_2/y_sort_enabled = true
 layer_2/y_sort_origin = 9
 layer_2/z_index = 10
-layer_2/tile_data = PackedInt32Array(458782, 262146, 0, 1179668, 262146, 0, 1179667, 262146, 0, 524301, 262146, 0, 983062, 262146, 0, 1179661, 262146, 0, 720917, 262146, 0, 1441809, 262146, 0, 917522, 262146, 0, 655395, 196610, 0, 851998, 196610, 0, 1376266, 196610, 0, 1572870, 196610, 0, 1507334, 196610, 0, 1376260, 196610, 0, 1703949, 196610, 0, 1638404, 196610, 0, 1507336, 196610, 0, 1572872, 196610, 0, 1572873, 196610, 0, 1638409, 196610, 0, 1966086, 196610, 0, 1966087, 196610, 0, 1966088, 196610, 0, 1966089, 196610, 0, 1966090, 196610, 0, 2031626, 196610, 0, 2031625, 196610, 0, 2097161, 196610, 0, 2097160, 196610, 0, 2097159, 196610, 0, 2031623, 196610, 0, 1835012, 196610, 0, 1900548, 196610, 0, 1900547, 196610, 0, 1966083, 196610, 0, 196622, 65538, 6, 196621, 2, 6, 196623, 65538, 7, 131085, 2, 5, 65552, 196610, 4, 65551, 131074, 4, 65549, 2, 4, 65550, 65538, 4, 131086, 65538, 5, 131087, 131074, 5, 131088, 196610, 5, 196624, 196610, 6)
+layer_2/tile_data = PackedInt32Array(655395, 196610, 0, 851998, 196610, 0, 1507334, 196610, 0, 1376260, 196610, 0, 1703949, 196610, 0, 1638404, 196610, 0, 1572873, 196610, 0, 1966086, 196610, 0, 1966087, 196610, 0, 1966090, 196610, 0, 2031626, 196610, 0, 2097161, 196610, 0, 2097159, 196610, 0, 2031623, 196610, 0, 1835012, 196610, 0, 1900548, 196610, 0, 1900547, 196610, 0, 1966083, 196610, 0, 196622, 65538, 6, 196621, 2, 6, 196623, 65538, 7, 131085, 2, 5, 65552, 196610, 4, 65551, 131074, 4, 65549, 2, 4, 65550, 65538, 4, 131086, 65538, 5, 131087, 131074, 5, 131088, 196610, 5, 196624, 196610, 6)
 layer_3/name = "mid air"
 layer_3/enabled = true
 layer_3/modulate = Color(1, 1, 1, 1)
@@ -467,6 +468,9 @@ layer_3/tile_data = PackedInt32Array()
 
 [node name="Stone" parent="TileMap2" instance=ExtResource("10_bdt6m")]
 position = Vector2(230, 143)
+
+[node name="Wood" parent="TileMap2" instance=ExtResource("4_a6tls")]
+position = Vector2(289, 157)
 
 [node name="Player" parent="TileMap2" instance=ExtResource("3_5oc1k")]
 position = Vector2(226, 75)
@@ -521,7 +525,8 @@ layout_mode = 0
 offset_top = 20.0
 offset_right = 40.0
 offset_bottom = 43.0
-text = "stone: 0"
+text = "stone: 0
+wood: 0"
 script = ExtResource("8_muytp")
 
 [node name="ResourceRespawnTimer" type="Timer" parent="."]
