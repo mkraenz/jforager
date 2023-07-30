@@ -7,13 +7,14 @@ var rng = RandomNumberGenerator.new()
 
 
 func _on_resource_respawn_timer_timeout():
-	var stone = Stone.instantiate()
-	add_child(stone)
-	stone.global_position = _random_vector()
+	spawn(Stone)
+	spawn(Wood)
 
-	var wood = Wood.instantiate()
-	add_child(wood)
-	wood.global_position = _random_vector()
+
+func spawn(ResourceBlueprint):
+	var resource = ResourceBlueprint.instantiate()
+	add_child(resource)
+	resource.global_position = _random_vector()
 
 
 func _random_vector() -> Vector2:
