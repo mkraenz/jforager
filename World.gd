@@ -2,13 +2,14 @@ extends Node2D
 
 var Stone = preload("res://world/resources/Stone.tscn")
 var Wood = preload("res://world/resources/Wood.tscn")
-
+var Iron = preload("res://world/resources/Iron.tscn")
 var rng = RandomNumberGenerator.new()
 
 
 func _on_resource_respawn_timer_timeout():
 	spawn(Stone)
 	spawn(Wood)
+	spawn(Iron)
 
 
 func spawn(ResourceBlueprint):

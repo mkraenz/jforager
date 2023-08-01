@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bi08raw4e5yar"]
+[gd_scene load_steps=15 format=3 uid="uid://bi08raw4e5yar"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_dmawl"]
 [ext_resource type="PackedScene" uid="uid://dmqejjicnug0q" path="res://player/Player.tscn" id="3_5oc1k"]
 [ext_resource type="PackedScene" uid="uid://cfwfxjsyruk5i" path="res://world/resources/Wood.tscn" id="4_a6tls"]
 [ext_resource type="Script" path="res://ui/TotalTime.gd" id="4_v5mmg"]
 [ext_resource type="FontFile" uid="uid://jjhy185jdb84" path="res://third-party/press_start_2p/PressStart2P-Regular.ttf" id="5_6ua4y"]
+[ext_resource type="PackedScene" uid="uid://b6rmikg1hliji" path="res://world/resources/Iron.tscn" id="5_xko72"]
 [ext_resource type="Script" path="res://ui/end/End.gd" id="6_nqdwy"]
 [ext_resource type="Script" path="res://ui/hud/Inventory.gd" id="8_muytp"]
 [ext_resource type="Texture2D" uid="uid://b7dnp4tya8yq8" path="res://third-party/kenney_tiny-town/Tilemap/tilemap-clean.png" id="10_8l12i"]
@@ -472,6 +473,9 @@ position = Vector2(230, 143)
 [node name="Wood" parent="TileMap2" instance=ExtResource("4_a6tls")]
 position = Vector2(289, 157)
 
+[node name="Iron" parent="TileMap2" instance=ExtResource("5_xko72")]
+position = Vector2(188, 146)
+
 [node name="Player" parent="TileMap2" instance=ExtResource("3_5oc1k")]
 position = Vector2(226, 75)
 scale = Vector2(0.977307, 0.996167)
@@ -526,7 +530,8 @@ offset_top = 20.0
 offset_right = 40.0
 offset_bottom = 43.0
 text = "stone: 0
-wood: 0"
+wood: 0
+iron: 0"
 script = ExtResource("8_muytp")
 
 [node name="ResourceRespawnTimer" type="Timer" parent="."]
